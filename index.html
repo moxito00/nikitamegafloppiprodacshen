@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="left">
+            <nav>
+                <div class="menu-item">
+                    <a href="#" onclick="showAllMice()">Меню</a>
+                    <div class="submenu">
+                        <a href="#" onclick="filterMice('rick')">rick</a>
+                        <a href="#" onclick="filterMice('nike')">nike</a>
+                        <a href="#" onclick="filterMice('vans')">vans</a>
+                        <a href="#" onclick="filterMice('konvata')">konvata</a>
+                    </div>
+                </div>
+                <a href="#">Про нас</a>
+                <a href="#">Спеціальні пропозиції</a>
+            </nav>
+        </div>
+        <div class="logo">
+            <img src="https://www.freepnglogos.com/uploads/mouse-png/mouse-get-advice-richmond-39.png">
+        </div>
+
+        <div class="contact-info">
+            <p>Телефон: (044) 123-45-67</p>
+            <p>Email: info@onlineshop.com.ua</p>
+            <p>Адреса: Київ, вул. Анни Ахматової, 22</p>
+            <div class="social-links">
+                <a href="#"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png"
+                        alt="Facebook"></a>
+                <a href="#"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/800px-Instagram_icon.png"
+                        alt="Instagram"></a>
+                <a href="#"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/1245px-Logo_of_Twitter.svg.png"
+                        alt="Twitter"></a>
+            </div>
+        </div>
+    </header>
+    <div class="shopping_cart">
+        <div class="shopping">
+            <img src="image/R.png">
+            <span class="quantity">0</span>
+        </div>
+    </div>
+    <div class="list">
+    </div>
+    <div class="cards">
+        <h1>Товари у кошику</h1>
+        <ul class="listCard">
+        </ul>
+        <div class="checkOut">
+            <div class="total">0</div>
+            <div class="closeShopping">Закрити</div>
+        </div>
+    </div>
+    <div class="cards-container">
+        <div class="card rick" onclick="openModal('modal1')">
+            <img src="image/1.jpg" alt="">
+            <h2> rick</h2>
+            <p>B NaYabnosti</p>
+            <p>4000</p>
+            <button onclick="AddToCard(0)">додати до кошика</button>
+        </div>
+        <div class="card rick" onclick="openModal('modal2')">
+            <img src="image/2.jpg" alt="">
+            <h2> rampn</h2>
+            <p>B NaYabnosti</p>
+            <p>400</p>
+            <button onclick="AddToCard(1)">додати до кошика</button>
+        </div>
+        <div class="card konvata" onclick="openModal('modal3')">
+            <img src="image/3.jpg" alt="">
+            <h2> konvata s klodo</h2>
+            <p>He NaYabnosti</p>
+            <p>40008</p>
+            <button onclick="AddToCard(2)">додати до кошика</button>
+        </div>
+        <div class="card konvata" onclick="openModal('modal4')">
+            <img src="image/3.jpg" alt="">
+            <h2> konvata s kl</h2>
+            <p>B NaYabnosti</p>
+            <p>4000</p>
+            <button onclick="AddToCard(3)">додати до кошика</button>
+        </div>
+        <div class="card vans" onclick="openModal('modal5')">
+            <img src="image/4.jfif" alt="">
+            <h2> konvata s kl</h2>
+            <p>B NaYabnosti</p>
+            <p>4000</p>
+            <button onclick="AddToCard(4)">додати до кошика</button>
+        </div>
+        <div class="card vans" onclick="openModal('modal6')">
+            <img src="image/5.jfif" alt="">
+            <h2> konvata s kl</h2>
+            <p>B NaYabnosti</p>
+            <p>4000</p>
+            <button onclick="AddToCard(5)">додати до кошика</button>
+        </div>
+        <div class="card rick" onclick="openModal('modal6')">
+            <img src="image/6." alt="">
+            <h2> konvata s kl</h2>
+            <p>B NaYabnosti</p>
+            <p>4000</p>
+            <button onclick="AddToCard(6)">додати до кошика</button>
+        </div>
+        <div class="card vans" onclick="openModal('modal7')" >
+            <img src="image/OIF (1).jfif" alt="">
+            <h2> konvata s kl</h2>
+            <p>B NaYabnosti</p>
+            <p>4000</p>
+            <button onclick="AddToCard(7)">додати до кошика</button>
+        </div>
+        <div class="card vans" onclick="openModal('modal8')">
+            <img src="image/OIF.jfif" alt="">
+            <h2> konvata s kl</h2>
+            <p>B NaYabnosti</p>
+            <p>4000</p>
+            <button onclick="AddToCard(8)">додати до кошика</button>
+        </div>
+        <div class="card vans" onclick="openModal('modal9')">
+            <img src="image/OIP (2).jfif" alt="">
+            <h2> konvata s kl</h2>
+            <p>B NaYabnosti</p>
+            <p>4000</p>
+            <button onclick="AddToCard(9)">додати до кошика</button>
+        </div>
+        <div class="card nike" onclick="openModal('modal10')">
+            <img src="image/OIP.jfif" alt="">
+            <h2> konvata s kl</h2>
+            <p>B NaYabnosti</p>
+            <p>4000</p>
+            <button onclick="AddToCard(10)">додати до кошика</button>
+        </div>
+        <div class="card vans" onclick="openModal('modal11')">
+            <img src="image/OIP (2).jfif" alt="">
+            <h2> konvata s kl</h2>
+            <p>B NaYabnosti</p>
+            <p>4000</p>
+            <button onclick="AddToCard(11)">додати до кошика</button>
+        </div>
+        <div class="card nike" onclick="openModal('modal12')">
+            <img src="image/OIF.jfif" alt="">
+            <h2> konvata s kl</h2>
+            <p>B NaYabnosti</p>
+            <p>4000</p>
+            <button onclick="AddToCard(12)">додати до кошика</button>
+        </div>
+        <div class="card vans" onclick="openModal('modal14')">
+            <img src="image/OIP.jfif" alt="">
+            <h2> konvata s kl</h2>
+            <p>B NaYabnosti</p>
+            <p>4000</p>
+            <button onclick="AddToCard(13)">додати до кошика</button>
+        </div>
+        <div class="card rick" onclick="openModal('modal15')">
+            <img src="image/BG02B5899_LMU_911_01.jpg" alt="">
+            <h2> konvata s kl</h2>
+            <p>B NaYabnosti</p>
+            <p>4000</p>
+            <button onclick="AddToCard(14)">додати до кошика</button>
+        </div>
+        <div class="card nike" onclick="openModal('modal16')">
+            <img src="image/images.jfif" alt="">
+            <h2>nike dunk</h2>
+            <p>B NaYabnosti</p>
+            <p>4000</p>
+            <button onclick="AddToCard(15)">додати до кошика</button>
+        </div>
+        <div class="card nike" onclick="openModal('modal17')">
+            <img src="image/images (1).jfif" alt="">
+            <h2> nike</h2>
+            <p>B NaYabnosti</p>
+            <p>4000</p>
+            <button onclick="AddToCard(16)">додати до кошика</button>
+        </div>
+    </div>
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <div class="modal-flex">
+                <img src="image/1.jpg" class="modal-img">
+                <div class="modal-info">
+                    <h2></h2>
+                    <p><strong>опис</strong> крутая подошва и все что может там бить только можно играть в доту в
+                        пацанами за гаражами </p>
+                    <p><strong>характер </strong>мега супер топ</p>
+                    <ul>
+                        <li>тип низкие</li>
+                        <li>не бу</li>
+                        <li>пробег 0км</li>
+                        <li>проход 0км</li>
+                        <li>плачу не налом, слезами</li>
+                        <li>топ качество просто ориг</li>
+                    </ul>
+                    <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                        Експрес-доставка доступна за додаткову плату.</p>
+                        <button onclick="AddToCard(0)">додати до кошика</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <div class="modal-flex">
+                <img src="image/2.jpg" class="modal-img">
+                <div class="modal-info">
+                    <h2></h2>
+                    <p><strong>опис</strong> крутая подошва и все что может там бить только можно играть в бравлик в
+                        пацанами за гаражами </p>
+                    <p><strong>характер сигма</strong>мега супер топ</p>
+                    <ul>
+                        <li>тип низкие</li>
+                        <li>не бу</li>
+                        <li>пробег 0км</li>
+                        <li>проход 0км</li>
+                        <li>плачу не налом, слезами</li>
+                        <li>топ качество просто ориг</li>
+                    </ul>
+                    <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                        Експрес-доставка доступна за додаткову плату.</p>
+                        <button onclick="AddToCard(1)">додати до кошика</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <div class="modal-flex">
+                <img src="image/3.jpg" class="modal-img">
+                <div class="modal-info">
+                    <h2></h2>
+                    <p><strong>опис</strong> крутая подошва и все что может там бить только можно играть в бравлик в
+                        пацанами за гаражами </p>
+                    <p><strong>характер сигма</strong>мега супер топ</p>
+                    <ul>
+                        <li>тип низкие</li>
+                        <li>не бу</li>
+                        <li>пробег 0км</li>
+                        <li>проход 0км</li>
+                        <li>плачу не налом, слезами</li>
+                        <li>топ качество просто ориг</li>
+                    </ul>
+                    <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                        Експрес-доставка доступна за додаткову плату.</p>
+                        <button onclick="AddToCard(2)">додати до кошика</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <div class="modal-flex">
+                <img src="image/3.jpg" class="modal-img">
+                <div class="modal-info">
+                    <h2></h2>
+                    <p><strong>опис</strong> крутая подошва и все что может там бить только можно играть в бравлик в
+                        пацанами за гаражами </p>
+                    <p><strong>характер сигма</strong>мега супер топ</p>
+                    <ul>
+                        <li>тип низкие</li>
+                        <li>не бу</li>
+                        <li>пробег 0км</li>
+                        <li>проход 0км</li>
+                        <li>плачу не налом, слезами</li>
+                        <li>топ качество просто ориг</li>
+                    </ul>
+                    <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                        Експрес-доставка доступна за додаткову плату.</p>
+                        <button onclick="AddToCard(3)">додати до кошика</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal5')">&times;</span>
+            <div class="modal-flex">
+                <img src="image/4.jfif" class="modal-img">
+                <div class="modal-info">
+                    <h2></h2>
+                    <p><strong>опис</strong> крутая подошва и все что может там бить только можно играть в бравлик в
+                        пацанами за гаражами </p>
+                    <p><strong>характер сигма</strong>мега супер топ</p>
+                    <ul>
+                        <li>тип низкие</li>
+                        <li>не бу</li>
+                        <li>пробег 0км</li>
+                        <li>проход 0км</li>
+                        <li>плачу не налом, слезами</li>
+                        <li>топ качество просто ориг</li>
+                    </ul>
+                    <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                        Експрес-доставка доступна за додаткову плату.</p>
+                        <button onclick="AddToCard(4)">додати до кошика</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal6')">&times;</span>
+            <div class="modal-flex">
+                <img src="image/5.jfif" class="modal-img">
+                <div class="modal-info">
+                    <h2></h2>
+                    <p><strong>опис</strong> крутая подошва и все что может там бить только можно играть в доту в
+                        пацанами за гаражами </p>
+                    <p><strong>характер </strong>мега супер топ</p>
+                    <ul>
+                        <li>тип низкие</li>
+                        <li>не бу</li>
+                        <li>пробег 0км</li>
+                        <li>проход 0км</li>
+                        <li>плачу не налом, слезами</li>
+                        <li>топ качество просто ориг</li>
+                    </ul>
+                    <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                        Експрес-доставка доступна за додаткову плату.</p>
+                        <button onclick="AddToCard(5)">додати до кошика</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal7" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal7')">&times;</span>
+            <div class="modal-flex">
+                <img src="image/6.jpg" class="modal-img">
+                <div class="modal-info">
+                    <h2></h2>
+                    <p><strong>опис</strong> крутая подошва и все что может там бить только можно играть в доту в
+                        пацанами за гаражами </p>
+                    <p><strong>характер </strong>мега супер топ</p>
+                    <ul>
+                        <li>тип низкие</li>
+                        <li>не бу</li>
+                        <li>пробег 0км</li>
+                        <li>проход 0км</li>
+                        <li>плачу не налом, слезами</li>
+                        <li>топ качество просто ориг</li>
+                    </ul>
+                    <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                        Експрес-доставка доступна за додаткову плату.</p>
+                        <button onclick="AddToCard(6)">додати до кошика</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal8" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal8')">&times;</span>
+            <div class="modal-flex">
+                <img src="image/BG02B5899_LMU_911_01.jpg" class="modal-img">
+                <div class="modal-info">
+                    <h2></h2>
+                    <p><strong>опис</strong> крутая подошва и все что может там бить только можно играть в доту в
+                        пацанами за гаражами </p>
+                    <p><strong>характер </strong>мега супер топ</p>
+                    <ul>
+                        <li>тип низкие</li>
+                        <li>не бу</li>
+                        <li>пробег 0км</li>
+                        <li>проход 0км</li>
+                        <li>плачу не налом, слезами</li>
+                        <li>топ качество просто ориг</li>
+                    </ul>
+                    <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                        Експрес-доставка доступна за додаткову плату.</p>
+                        <button onclick="AddToCard(7)">додати до кошика</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal9" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal9')">&times;</span>
+            <div class="modal-flex">
+                <img src="image/BG02B5899_LMU_911_01.jpg" class="modal-img">
+                <div class="modal-info">
+                    <h2></h2>
+                    <p><strong>опис</strong> крутая подошва и все что может там бить только можно играть в доту в
+                        пацанами за гаражами </p>
+                    <p><strong>характер </strong>мега супер топ</p>
+                    <ul>
+                        <li>тип низкие</li>
+                        <li>не бу</li>
+                        <li>пробег 0км</li>
+                        <li>проход 0км</li>
+                        <li>плачу не налом, слезами</li>
+                        <li>топ качество просто ориг</li>
+                    </ul>
+                    <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                        Експрес-доставка доступна за додаткову плату.</p>
+                        <button onclick="AddToCard(8)">додати до кошика</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal10" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal10')">&times;</span>
+            <div class="modal-flex">
+                <img src="image/BG02B5899_LMU_911_01.jpg" class="modal-img">
+                <div class="modal-info">
+                    <h2></h2>
+                    <p><strong>опис</strong> крутая подошва и все что может там бить только можно играть в доту в
+                        пацанами за гаражами </p>
+                    <p><strong>характер </strong>мега супер топ</p>
+                    <ul>
+                        <li>тип низкие</li>
+                        <li>не бу</li>
+                        <li>пробег 0км</li>
+                        <li>проход 0км</li>
+                        <li>плачу не налом, слезами</li>
+                        <li>топ качество просто ориг</li>
+                    </ul>
+                    <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                        Експрес-доставка доступна за додаткову плату.</p>
+                        <button onclick="AddToCard(9)">додати до кошика</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal11" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal11')">&times;</span>
+            <div class="modal-flex">
+                <img src="image/BG02B5899_LMU_911_01.jpg" class="modal-img">
+                <div class="modal-info">
+                    <h2></h2>
+                    <p><strong>опис</strong> крутая подошва и все что может там бить только можно играть в доту в
+                        пацанами за гаражами </p>
+                    <p><strong>характер </strong>мега супер топ</p>
+                    <ul>
+                        <li>тип низкие</li>
+                        <li>не бу</li>
+                        <li>пробег 0км</li>
+                        <li>проход 0км</li>
+                        <li>плачу не налом, слезами</li>
+                        <li>топ качество просто ориг</li>
+                    </ul>
+                    <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                        Експрес-доставка доступна за додаткову плату.</p>
+                        <button onclick="AddToCard(10)">додати до кошика</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal12" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal12')">&times;</span>
+            <div class="modal-flex">
+                <img src="image/BG02B5899_LMU_911_01.jpg" class="modal-img">
+                <div class="modal-info">
+                    <h2></h2>
+                    <p><strong>опис</strong> крутая подошва и все что может там бить только можно играть в доту в
+                        пацанами за гаражами </p>
+                    <p><strong>характер </strong>мега супер топ</p>
+                    <ul>
+                        <li>тип низкие</li>
+                        <li>не бу</li>
+                        <li>пробег 0км</li>
+                        <li>проход 0км</li>
+                        <li>плачу не налом, слезами</li>
+                        <li>топ качество просто ориг</li>
+                    </ul>
+                    <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                        Експрес-доставка доступна за додаткову плату.</p>
+                        <button onclick="AddToCard(11)">додати до кошика</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal13" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal13')">&times;</span>
+            <div class="modal-flex">
+                <img src="image/BG02B5899_LMU_911_01.jpg" class="modal-img">
+                <div class="modal-info">
+                    <h2></h2>
+                    <p><strong>опис</strong> крутая подошва и все что может там бить только можно играть в доту в
+                        пацанами за гаражами </p>
+                    <p><strong>характер </strong>мега супер топ</p>
+                    <ul>
+                        <li>тип низкие</li>
+                        <li>не бу</li>
+                        <li>пробег 0км</li>
+                        <li>проход 0км</li>
+                        <li>плачу не налом, слезами</li>
+                        <li>топ качество просто ориг</li>
+                    </ul>
+                    <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                        Експрес-доставка доступна за додаткову плату.</p>
+                        <button onclick="AddToCard(12)">додати до кошика</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal14" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal14')">&times;</span>
+            <div class="modal-flex">
+                <img src="image/BG02B5899_LMU_911_01.jpg" class="modal-img">
+                <div class="modal-info">
+                    <h2></h2>
+                    <p><strong>опис</strong> крутая подошва и все что может там бить только можно играть в доту в
+                        пацанами за гаражами </p>
+                    <p><strong>характер </strong>мега супер топ</p>
+                    <ul>
+                        <li>тип низкие</li>
+                        <li>не бу</li>
+                        <li>пробег 0км</li>
+                        <li>проход 0км</li>
+                        <li>плачу не налом, слезами</li>
+                        <li>топ качество просто ориг</li>
+                    </ul>
+                    <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                        Експрес-доставка доступна за додаткову плату.</p>
+                        <button onclick="AddToCard(13)">додати до кошика</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal15" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal15')">&times;</span>
+            <div class="modal-flex">
+                <img src="image/BG02B5899_LMU_911_01.jpg" class="modal-img">
+                <div class="modal-info">
+                    <h2></h2>
+                    <p><strong>опис</strong> крутая подошва и все что может там бить только можно играть в доту в
+                        пацанами за гаражами </p>
+                    <p><strong>характер </strong>мега супер топ</p>
+                    <ul>
+                        <li>тип низкие</li>
+                        <li>не бу</li>
+                        <li>пробег 0км</li>
+                        <li>проход 0км</li>
+                        <li>плачу не налом, слезами</li>
+                        <li>топ качество просто ориг</li>
+                    </ul>
+                    <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                        Експрес-доставка доступна за додаткову плату.</p>
+                        <button onclick="AddToCard(14)">додати до кошика</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal16" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal16')">&times;</span>
+            <div class="modal-flex">
+                <img src="image/BG02B5899_LMU_911_01.jpg" class="modal-img">
+                <div class="modal-info">
+                    <h2></h2>
+                    <p><strong>опис</strong> крутая подошва и все что может там бить только можно играть в доту в
+                        пацанами за гаражами </p>
+                    <p><strong>характер </strong>мега супер топ</p>
+                    <ul>
+                        <li>тип низкие</li>
+                        <li>не бу</li>
+                        <li>пробег 0км</li>
+                        <li>проход 0км</li>
+                        <li>плачу не налом, слезами</li>
+                        <li>топ качество просто ориг</li>
+                    </ul>
+                    <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                        Експрес-доставка доступна за додаткову плату.</p>
+                        <button onclick="AddToCard(15)">додати до кошика</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

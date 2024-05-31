@@ -1,0 +1,336 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    border: 3px solid #191b1a;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.card img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+header{
+    background-color: rgb(154, 249, 249);
+    display: flex;
+    justify-content: space-around;
+    left: 10px;
+    right: 10px;
+    align-items: center;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.logo img{
+    max-width: 180px;
+}
+.contact-info{
+    text-align: right;
+}
+.social-links{
+    display: flex;
+    justify-content: space-between;
+}
+.social-links img{
+    max-width:30px ;
+}
+nav a{
+    text-decoration: none;
+    color: rgb(20, 21, 20);
+    font-size: 1.2rem;
+    border: 2px solid rgb(24, 24, 24);
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: background-color 0.3s;
+    transition: font-size 0.4s;
+}
+nav a:hover{
+    background-color: rgb(154, 249, 249);
+    color: rgb(217, 18, 18);
+    font-size: 1.3rem;
+}
+.menu-item{
+    position: relative; 
+    display: inline-block;
+    padding: 0px;   
+}
+.footer-section h3{
+    text-align: center;
+}
+.footer-section img{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(154, 249, 249);
+}
+.social-links {
+    display: flex;
+    justify-content: space-around;
+}
+.submenu{
+    display: none;
+    position:absolute;
+    left: 0px;
+    top:100%;
+    background-color: rgb(54, 225, 225);
+    border: 3px solid rgb(54, 225, 225);
+    z-index: 1;
+}
+.submenu a{
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    background-color: rgb(154, 249, 249);
+    font-size: 15px;
+}
+.menu-item:hover .submenu{
+    display: block;
+}
+.submenu a:hover{
+    background-color: rgb(54, 225, 225);
+}
+.modal {
+    display: none; /* Спочатку ховаємо модальне вікно */
+    position: fixed; /* Фіксоване позиціонування */
+    z-index: 1; /* Встановлюємо z-index для вікна */
+    left: 0;
+    top: 0;
+    width: 100%; /* Повна ширина */
+    height: 100%; /* Повна висота */
+    overflow: auto; /* Додавання прокрутки, якщо потрібно */
+    background-color: rgb(0,0,0); /* Фоновий колір з непрозорістю */
+    background-color: rgba(0,0,0,0.4); /* Чорний фон з прозорістю */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Відступи зверху та авто по центру */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ширина вмісту */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-flex {
+    display: flex;
+    align-items: center;
+}
+.modal-img {
+  max-height: 500px;
+  width: auto;
+  border: 20px;
+}
+.modal-info {
+    width: 50%;
+    padding: 20px;
+}
+button {
+    background-color: #191b1a;
+    color: azure;
+    padding: 12px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+transition: background-color 0.3s;
+font-size: 16px;
+}
+button:hover {
+    background-color: darkcyan;
+}
+.shopping_cart {
+ width: 1000px; 
+ margin: auto;
+ transition: 0.5s;
+ background-color: #fefefe;
+}
+.shopping {
+    z-index: 500;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+}
+.shopping img {
+    width: 40px;
+}
+.shopping .quantity {
+    background: #191b1a;
+    border-radius: 50%;
+    color:#fff;
+    padding: 3px 10px;
+    margin-left: 5px;
+}
+.cards {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 500px;
+    background-color: rgb(54, 225, 225);
+    height: 100vh;
+    transition: 0.5s;
+}
+
+.active .cards {
+    left: calc(100% - 500px);
+}
+
+
+.cards .checkOut {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cards .checkOut div {
+    background-color:rgb(20, 21, 20);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+.list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-top: 50px;
+}
+
+.list .item {
+    text-align: center;
+    background-color: #DCE0E1;
+    padding: 20px;
+    box-shadow: 0 50px 50px #757676;
+}
+.listCard li {
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: #fff;
+    row-gap: 10px;
+}
+
+.listCard li div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listCard li img {
+    margin-top: 10px;
+    width: 90%;
+}
+
+.listCard li button {
+    background-color: #fff5;
+    border: none;
+}
+
+.listCard .count {
+    margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        flex-direction: wrap;
+        display: block;
+    }
+    .contact-info, .logo {
+        display: none;
+    }
+    nav a {
+        border: 1px solid black;
+        border-radius: 0px;
+        padding: 5px 2px;
+        border: 1px solid white;
+    }
+    .footer-container {
+        flex-direction: wrap;
+        display: block;
+        flex-wrap: wrap;
+    }
+    .footer-container .footer-section p {
+        text-align: center;
+    }
+    .footer-container .footer-section ul {
+        text-align: center;
+        list-style-type: none;
+        padding: 0;
+    }
+    .modal {
+        max-width: 90%;
+    }
+    .modal-flex {
+        display: block;
+        text-align: center; 
+    }
+    
+    .modal-img {
+        max-width: 100%;
+        height: auto; 
+        margin-bottom: 20px;
+    }
+    
+    .modal-info {
+        width: 100%;
+        padding: 0; 
+    }
+    .modal-content {
+        margin: 10% auto; 
+        width: 90%; 
+    }
+} 
